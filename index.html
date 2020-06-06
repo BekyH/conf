@@ -40,6 +40,51 @@
         </div>
 
     </nav>
+    <div id="reservetablemodal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                        <h4 class="modal-title">Reserve a Table</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                </div>
+                <div class="modal-body">
+                        
+                               
+                                <form class="mt-4" id="reservation">
+                                    <div class="form-group row">
+                                        <label for="guests" class="col-sm-2 offset-sm-1 col-form-label">Number of Guests</label>
+                                        <div class="col-sm-6">
+                                            <label class="radio-inline"><input type="radio" name="optradio">  1  </label>
+                                            <label class="radio-inline"><input type="radio" name="optradio">  2  </label>
+                                            <label class="radio-inline"><input type="radio" name="optradio">  3  </label>
+                                            <label class="radio-inline"><input type="radio" name="optradio">  4  </label>
+                                            <label class="radio-inline"><input type="radio" name="optradio">  5  </label>
+                                            <label class="radio-inline"><input type="radio" name="optradio">  6  </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="dateandtime" class="col-sm-2 offset-sm-1 col-form-label">Date and Time</label>
+                                        <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="dateandtime" name="date" placeholder="Date">
+                                    </div>
+                                    <div class="col-sm-3">
+                                            <input type="text" class="form-control" id="dateandtime" name="time" placeholder="Time">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 offset-sm-3">
+                                                <button type="submit" class="btn btn-secondary">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Reserve</button>
+                                        </div>
+                                    </div>
+                                </form>
+                           
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="loginModal" class="modal fade" role="dialog" >
         <div class="modal-dialog modal-lg" role="content">
@@ -91,10 +136,7 @@
                 </div>
                 <div class="col-sm align-self-center">
                     <!-- <button type="button" class="btn btn-warning btn-block">Reserve  Table</button> -->
-                    <a class="btn btn-warning btn-block" data-toggle="tooltip" data-html="true"
-                     title="Or Call us at <br><strong>+851 123456789</strong>"
-                     data-placement="bottom"
-                     href="#reservation">Reserve Table</a>
+                    <a class="btn btn-warning btn-block"data-toggle="modal" data-target="#reservetablemodal">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -196,41 +238,7 @@
         </div>
         </div>
         </div>
-        <div class="row row-content">
-            <div class="col-12 col-sm-8 offset-sm-2">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <form class="mt-4" id="reservation">
-                        <div class="form-group row">
-                            <label for="guests" class="col-sm-2 offset-sm-1 col-form-label">Number of Guests</label>
-                            <div class="col-sm-6">
-                                <label class="radio-inline"><input type="radio" name="optradio">  1  </label>
-                                <label class="radio-inline"><input type="radio" name="optradio">  2  </label>
-                                <label class="radio-inline"><input type="radio" name="optradio">  3  </label>
-                                <label class="radio-inline"><input type="radio" name="optradio">  4  </label>
-                                <label class="radio-inline"><input type="radio" name="optradio">  5  </label>
-                                <label class="radio-inline"><input type="radio" name="optradio">  6  </label>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="dateandtime" class="col-sm-2 offset-sm-1 col-form-label">Date and Time</label>
-                            <div class="col-sm-3">
-                            <input type="text" class="form-control" id="dateandtime" name="date" placeholder="Date">
-                        </div>
-                        <div class="col-sm-3">
-                                <input type="text" class="form-control" id="dateandtime" name="time" placeholder="Time">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-6 offset-sm-3">
-                                <button type="submit" class="btn btn-primary">Reserve</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-        </div>
+        
     </div>
 
     <footer class="footer">
@@ -279,11 +287,8 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-        
-    });
+   
     </script>
 </body>
 
-</html>
+</html
