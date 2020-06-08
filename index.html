@@ -148,7 +148,7 @@
                 </div>
                 <div class="col-sm align-self-center">
                     <!-- <button type="button" class="btn btn-warning btn-block">Reserve  Table</button> -->
-                    <a class="btn btn-warning btn-block"data-toggle="modal" data-target="#reservetablemodal">Reserve Table</a>
+                    <a class="btn btn-warning btn-block text-white" href="#reservetablemodal">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -317,9 +317,12 @@
                 $('#mycarousel').carousel('cycle');
 
             });
-           
+           //reservetablemodal
             $('a[href$="#loginmodal"]').on( "click", function() {
    $('#loginmodal').modal('show');
+});
+$('a[href$="#reservetablemodal"]').on( "click", function() {
+   $('#reservetablemodal').modal('show');
 });
         });
        
