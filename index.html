@@ -30,7 +30,7 @@
                             <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                         </ul>
                         <span class="navbar-text">
-                            <a data-toggle="modal" data-target="#loginModal">
+                            <a href="#loginmodal">
                                 <span class="fa fa-sign-in"></span> Login
                             </a>
                         </span>
@@ -67,7 +67,11 @@
                                     <div class="form-group row">
                                         <label for="section" class="col-sm-2 offset-sm-1 col-form-label">Section</label>
                                         <div class="col-sm-3">
-                                                
+                                                <div class="btn-group " role="group">
+                                                        <button type="button" class="btn btn-success">Smoking</button>
+                                                        <button type="button" class="btn btn-danger">Non-smoking</button>
+                                                        
+                                                      </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -92,7 +96,7 @@
         </div>
     </div>
 
-    <div id="loginModal" class="modal fade" role="dialog" >
+    <div id="loginmodal" class="modal fade" role="dialog" >
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                     <div class="modal-header">
@@ -313,8 +317,13 @@
                 $('#mycarousel').carousel('cycle');
 
             });
-
+           
+            $('a[href$="#loginmodal"]').on( "click", function() {
+   $('#loginmodal').modal('show');
+});
         });
+       
+
     </script>
 </body>
 
