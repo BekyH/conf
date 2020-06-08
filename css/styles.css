@@ -16,7 +16,7 @@
 .jumbotron {
     padding:70px 30px 70px 30px;
     margin:0px auto;
-    background: #9575CD ;
+ background: #9575CD ;
     color:floralwhite;
 }
 
@@ -53,4 +53,9 @@ body{
     top: 0;
     left: 0;
     min-height: 300px;
+}
+#carouselButton{
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
 }
